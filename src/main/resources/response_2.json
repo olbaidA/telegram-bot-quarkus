@@ -1,0 +1,58 @@
+{
+  "ok": true,
+  "result": {
+    "message_id": 538,
+    "from": {
+      "id": 7744704426,
+      "is_bot": true,
+      "first_name": "SqueetBot",
+      "username": "OlbaidBot"
+    },
+    "chat": {
+      "id": 161252687,
+      "first_name": "AG$X",
+      "last_name": "Gabriel",
+      "username": "il_GaG",
+      "type": "private"
+    },
+    "date": 1729456330,
+    "photo": [
+      {
+        "file_id": "AgACAgQAAxkDAAIBJWcVMhnwninrxiKtePVSbt3UbUC_AAK7wjEbkFGoUGJkVYSa6r-dAQADAgADcwADNgQ",
+        "file_unique_id": "AQADu8IxG5BRqFB4",
+        "file_size": 887,
+        "width": 90,
+        "height": 56
+      },
+      {
+        "file_id": "AgACAgQAAxkDAAIBJWcVMhnwninrxiKtePVSbt3UbUC_AAK7wjEbkFGoUGJkVYSa6r-dAQADAgADbQADNgQ",
+        "file_unique_id": "AQADu8IxG5BRqFBy",
+        "file_size": 14869,
+        "width": 320,
+        "height": 200
+      },
+      {
+        "file_id": "AgACAgQAAxkDAAIBJWcVMhnwninrxiKtePVSbt3UbUC_AAK7wjEbkFGoUGJkVYSa6r-dAQADAgADeAADNgQ",
+        "file_unique_id": "AQADu8IxG5BRqFB9",
+        "file_size": 59998,
+        "width": 800,
+        "height": 500
+      },
+      {
+        "file_id": "AgACAgQAAxkDAAIBJWcVMhnwninrxiKtePVSbt3UbUC_AAK7wjEbkFGoUGJkVYSa6r-dAQADAgADeQADNgQ",
+        "file_unique_id": "AQADu8IxG5BRqFB-",
+        "file_size": 128356,
+        "width": 1280,
+        "height": 800
+      },
+      {
+        "file_id": "AgACAgQAAxkDAAIBJWcVMhnwninrxiKtePVSbt3UbUC_AAK7wjEbkFGoUGJkVYSa6r-dAQADAgADdwADNgQ",
+        "file_unique_id": "AQADu8IxG5BRqFB8",
+        "file_size": 370426,
+        "width": 2560,
+        "height": 1600
+      }
+    ],
+    "caption": "caption"
+  }
+}

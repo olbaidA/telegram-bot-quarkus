@@ -1,0 +1,51 @@
+{
+  "ok": true,
+  "result": [
+    {
+      "update_id": 829394001,
+      "callback_query": {
+        "id": "4214591721939491037",
+        "from": {
+          "id": 7423737047,
+          "is_bot": false,
+          "first_name": "Gabriele",
+          "last_name": "Allegretti",
+          "language_code": "it"
+        },
+        "message": {
+          "message_id": 1034,
+          "from": {
+            "id": 7744704426,
+            "is_bot": true,
+            "first_name": "SqueezeBotOlba",
+            "username": "OlbaidBot"
+          },
+          "chat": {
+            "id": 7423737047,
+            "first_name": "Gabriele",
+            "last_name": "Allegretti",
+            "type": "private"
+          },
+          "date": 1729951367,
+          "text": "Choose an option:",
+          "reply_markup": {
+            "inline_keyboard": [
+              [
+                {
+                  "text": "/photo",
+                  "callback_data": "callback_1"
+                },
+                {
+                  "text": "Button 2",
+                  "callback_data": "callback_2"
+                }
+              ]
+            ]
+          }
+        },
+        "chat_instance": "-4013330939028838182",
+        "data": "callback_2"
+      }
+    }
+  ]
+}
