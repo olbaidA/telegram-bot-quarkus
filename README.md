@@ -15,10 +15,14 @@ Integration:
 - postgresql
 - binance api
 
-## 20/10/2024:
+## 26/10/2024:
 Features:
 - menu with buttons
 - interactive inline keyboard with callback
+
+## 27/10/2024:
+Features:
+- interactive reply keyboard with callback ( doesn't work on telegram desktop )
 
 
 ```
