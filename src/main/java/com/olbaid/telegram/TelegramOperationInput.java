@@ -21,7 +21,7 @@ public class TelegramOperationInput extends TelegramOperation{
 
     public void getUpdates() {
         Response response = telegramClient.getBaseTarget().path("getUpdates")
-                .queryParam("offset", -1)
+//                .queryParam("offset", -1)
                 .request()
                 .get();
 

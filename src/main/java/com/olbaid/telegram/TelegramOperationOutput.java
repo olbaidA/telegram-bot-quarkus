@@ -8,6 +8,7 @@ import com.olbaid.telegram.getter.model.Media;
 import com.olbaid.telegram.model.BotCommand;
 import com.olbaid.telegram.model.BotCommandScope;
 import com.olbaid.telegram.model.InlineKeyboardMarkup;
+import com.olbaid.telegram.model.ReplyKeyboardMarkup;
 import jakarta.enterprise.context.ApplicationScoped;
 import jakarta.inject.Inject;
 import jakarta.ws.rs.client.Entity;
@@ -99,6 +100,27 @@ public class TelegramOperationOutput {
             handleResponse(response, "Send message with inline keyboard failed!");
         } catch (Exception e) {
             LOG.error("Failed to send message with inline keyboard!", e);
+        }
+    }
+
+
+    public void sendMessageWithReplyKeyboard(String messageRequest, Long chatId, ReplyKeyboardMarkup replyKeyboardMarkup) {
+        try {
+            ObjectMapper objectMapper = new ObjectMapper();
+            ObjectNode payload = objectMapper.createObjectNode();
+            payload.put("chat_id", chatId);
+            payload.put("text", messageRequest);
+            payload.set("reply_markup", objectMapper.valueToTree(replyKeyboardMarkup));
+
+            LOG.debug("Payload JSON: " + payload.toString());
+
+            Response response = telegramClient.getBaseTarget().path("sendMessage")
+                    .request()
+                    .post(Entity.json(payload.toString()));
+
+            handleResponse(response, "Send message with reply keyboard failed!");
+        } catch (Exception e) {
+            LOG.error("Failed to send message with reply keyboard!", e);
         }
     }
 

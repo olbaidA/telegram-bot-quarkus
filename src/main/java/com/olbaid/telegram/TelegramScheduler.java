@@ -40,7 +40,8 @@ public class TelegramScheduler {
 				new BotCommand("stop", "Stop the bot"),
 				new BotCommand("photo", "Send a photo"),
 				new BotCommand("chenepensi", "Send a random yes/no animation"),
-				new BotCommand("buttons", "View buttons")
+				new BotCommand("buttons", "View buttons"),
+				new BotCommand("customkeyboard", "View custom keyboard")
 		};
 		BotCommandScopeDefault scope = new BotCommandScopeDefault();
 		telegramOperationOutput.setMyCommands(commands, scope);

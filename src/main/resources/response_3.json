@@ -2,9 +2,9 @@
   "ok": true,
   "result": [
     {
-      "update_id": 829394001,
-      "callback_query": {
-        "id": "4214591721939491037",
+      "update_id": 829394095,
+      "message": {
+        "message_id": 1216,
         "from": {
           "id": 7423737047,
           "is_bot": false,
@@ -12,39 +12,104 @@
           "last_name": "Allegretti",
           "language_code": "it"
         },
-        "message": {
-          "message_id": 1034,
-          "from": {
-            "id": 7744704426,
-            "is_bot": true,
-            "first_name": "SqueezeBotOlba",
-            "username": "OlbaidBot"
-          },
-          "chat": {
-            "id": 7423737047,
-            "first_name": "Gabriele",
-            "last_name": "Allegretti",
-            "type": "private"
-          },
-          "date": 1729951367,
-          "text": "Choose an option:",
-          "reply_markup": {
-            "inline_keyboard": [
-              [
-                {
-                  "text": "/photo",
-                  "callback_data": "callback_1"
-                },
-                {
-                  "text": "Button 2",
-                  "callback_data": "callback_2"
-                }
-              ]
-            ]
-          }
+        "chat": {
+          "id": 7423737047,
+          "first_name": "Gabriele",
+          "last_name": "Allegretti",
+          "type": "private"
         },
-        "chat_instance": "-4013330939028838182",
-        "data": "callback_2"
+        "date": 1730020426,
+        "text": "/customkeyboard",
+        "entities": [
+          {
+            "offset": 0,
+            "length": 15,
+            "type": "bot_command"
+          }
+        ]
+      }
+    },
+    {
+      "update_id": 829394096,
+      "message": {
+        "message_id": 1218,
+        "from": {
+          "id": 161252687,
+          "is_bot": false,
+          "first_name": "AG$X",
+          "last_name": "Gabriel",
+          "username": "il_GaG",
+          "language_code": "it"
+        },
+        "chat": {
+          "id": 161252687,
+          "first_name": "AG$X",
+          "last_name": "Gabriel",
+          "username": "il_GaG",
+          "type": "private"
+        },
+        "date": 1730020492,
+        "text": "/customkeyboard",
+        "entities": [
+          {
+            "offset": 0,
+            "length": 15,
+            "type": "bot_command"
+          }
+        ]
+      }
+    },
+    {
+      "update_id": 829394097,
+      "message": {
+        "message_id": 1220,
+        "from": {
+          "id": 161252687,
+          "is_bot": false,
+          "first_name": "AG$X",
+          "last_name": "Gabriel",
+          "username": "il_GaG",
+          "language_code": "it"
+        },
+        "chat": {
+          "id": 161252687,
+          "first_name": "AG$X",
+          "last_name": "Gabriel",
+          "username": "il_GaG",
+          "type": "private"
+        },
+        "date": 1730020528,
+        "text": "Option A"
+      }
+    },
+    {
+      "update_id": 829394098,
+      "message": {
+        "message_id": 1221,
+        "from": {
+          "id": 161252687,
+          "is_bot": false,
+          "first_name": "AG$X",
+          "last_name": "Gabriel",
+          "username": "il_GaG",
+          "language_code": "it"
+        },
+        "chat": {
+          "id": 161252687,
+          "first_name": "AG$X",
+          "last_name": "Gabriel",
+          "username": "il_GaG",
+          "type": "private"
+        },
+        "date": 1730020560,
+        "text": "/customkeyboard",
+        "entities": [
+          {
+            "offset": 0,
+            "length": 15,
+            "type": "bot_command"
+          }
+        ]
       }
     }
   ]

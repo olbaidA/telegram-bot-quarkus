@@ -29,7 +29,7 @@ public abstract class TelegramOperation {
 
     public void handleResponse(Response response, String errorMessage) {
         try {
-            String jsonResponse = response.readEntity(String.class);
+             String jsonResponse = response.readEntity(String.class);
             ObjectMapper objectMapper = new ObjectMapper();
             JsonNode jsonNode = objectMapper.readTree(jsonResponse);
             LOG.debug("TelegramOperationInput response: {}", jsonNode);
@@ -135,6 +135,14 @@ public abstract class TelegramOperation {
                         )
                 );
                 telegramOperationOutput.sendMessageWithInlineKeyboard("Choose an option:", chatId, inlineKeyboardMarkup);
+                break;
+            case "/customkeyboard":
+                KeyboardButton buttonA = new KeyboardButton("Option A");
+                KeyboardButton buttonB = new KeyboardButton("Option B");
+                List<KeyboardButton> row1 = Arrays.asList(buttonA, buttonB);
+                List<List<KeyboardButton>> keyboard = Arrays.asList(row1);
+                ReplyKeyboardMarkup replyKeyboardMarkup = new ReplyKeyboardMarkup(keyboard, true, true, false);
+                telegramOperationOutput.sendMessageWithReplyKeyboard("Choose an option:", chatId, replyKeyboardMarkup);
                 break;
         }
     }
