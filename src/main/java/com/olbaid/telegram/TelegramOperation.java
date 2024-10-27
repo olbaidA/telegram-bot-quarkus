@@ -24,12 +24,12 @@ public abstract class TelegramOperation {
     @Inject
     TelegramOperationOutput telegramOperationOutput;
 
-    private final Map<String, Set<Integer>> processedMessageIds = new HashMap<>();
+    private final Map<String, Set<Long>> processedMessageIds = new HashMap<>();
     private final Map<String, Set<String>> processedCallbackIds = new HashMap<>();
 
     public void handleResponse(Response response, String errorMessage) {
         try {
-             String jsonResponse = response.readEntity(String.class);
+            String jsonResponse = response.readEntity(String.class);
             ObjectMapper objectMapper = new ObjectMapper();
             JsonNode jsonNode = objectMapper.readTree(jsonResponse);
             LOG.debug("TelegramOperationInput response: {}", jsonNode);
@@ -62,7 +62,7 @@ public abstract class TelegramOperation {
         if (message != null) {
             Long messageFromId = message.getFrom().getId();
             Long messageChatId = message.getChat().getId();
-            Integer messageId = message.getMessageId();
+            Long messageId = message.getMessageId();
             Integer messageDate = message.getDate();
 
             if (messageDate < (System.currentTimeMillis() / 1000L) - 60) {
@@ -137,11 +137,17 @@ public abstract class TelegramOperation {
                 telegramOperationOutput.sendMessageWithInlineKeyboard("Choose an option:", chatId, inlineKeyboardMarkup);
                 break;
             case "/customkeyboard":
-                KeyboardButton buttonA = new KeyboardButton("Option A");
-                KeyboardButton buttonB = new KeyboardButton("Option B");
-                List<KeyboardButton> row1 = Arrays.asList(buttonA, buttonB);
-                List<List<KeyboardButton>> keyboard = Arrays.asList(row1);
-                ReplyKeyboardMarkup replyKeyboardMarkup = new ReplyKeyboardMarkup(keyboard, true, true, false);
+                KeyboardButton buttonA = new KeyboardButton("Condividi numero al Bot", null, null, true, true, null, new WebAppInfo("https://www.google.com"));
+                KeyboardButton buttonB = new KeyboardButton("Condividi location al Bot", null, null, false, true, null, new WebAppInfo("https://www.google.com"));
+                KeyboardButton buttonC = new KeyboardButton("WebApp", null, null, false, false, null, new WebAppInfo("https://www.google.com"));
+                KeyboardButton buttonD = new KeyboardButton("Option D");
+                KeyboardButton buttonE = new KeyboardButton("Option E");
+                KeyboardButton buttonF = new KeyboardButton("Option F");
+                List<KeyboardButton> row1 = List.of(buttonA);
+                List<KeyboardButton> row2 = List.of(buttonB, buttonC, buttonD);
+                List<KeyboardButton> row3 = List.of(buttonE, buttonF);
+                List<List<KeyboardButton>> keyboard = List.of(row1, row2, row3);
+                ReplyKeyboardMarkup replyKeyboardMarkup = new ReplyKeyboardMarkup(keyboard, true,true, false, "PIPPO", false);
                 telegramOperationOutput.sendMessageWithReplyKeyboard("Choose an option:", chatId, replyKeyboardMarkup);
                 break;
         }

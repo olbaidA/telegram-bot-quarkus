@@ -2,6 +2,7 @@ package com.olbaid.telegram;
 
 import com.olbaid.telegram.getter.TelegramMessageGetter;
 import com.olbaid.telegram.model.BotCommand;
+import com.olbaid.telegram.model.BotCommandScopeChatAdministrators;
 import com.olbaid.telegram.model.BotCommandScopeDefault;
 import io.quarkus.scheduler.Scheduled;
 import jakarta.annotation.PostConstruct;
@@ -35,20 +36,25 @@ public class TelegramScheduler {
 
 	@PostConstruct
 	public void init() {
-		BotCommand[] commands = {
+		BotCommand[] commandsDefault = {
 				new BotCommand("start", "Start the bot"),
 				new BotCommand("stop", "Stop the bot"),
 				new BotCommand("photo", "Send a photo"),
 				new BotCommand("chenepensi", "Send a random yes/no animation"),
 				new BotCommand("buttons", "View buttons"),
+		};
+		BotCommandScopeDefault scopeDefault = new BotCommandScopeDefault();
+		BotCommand[] commandsAdministration = {
 				new BotCommand("customkeyboard", "View custom keyboard")
 		};
-		BotCommandScopeDefault scope = new BotCommandScopeDefault();
-		telegramOperationOutput.setMyCommands(commands, scope);
+		//TODO: refactoring chatid = Gabriele
+		BotCommandScopeChatAdministrators scopeAdmin = new BotCommandScopeChatAdministrators("161252687");
+		telegramOperationOutput.setMyCommands(commandsDefault, scopeDefault);
+		telegramOperationOutput.setMyCommands(commandsAdministration, scopeAdmin);
 		LOG.info("TelegramScheduler initialized");
 	}
 
-	@Scheduled(every = "2s")
+	@Scheduled(every = "1s")
 	public void sendQueryResults() {
 //		if(messageGetter.get().getObject() instanceof Photo) {
 //			Photo photo = (Photo) messageGetter.get().getObject();

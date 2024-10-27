@@ -15,7 +15,7 @@ public class TelegramMessagePhoto implements TelegramMessageGetter {
 
 	@Override
 	public Media getObject() {
-//		return new Photo(Photo.PhotoType.PATH, "/media/olbaid/Volume/94517.jpg", null,  "caption");
+//		return new Media(Media.MediaType.PATH, "/media/olbaid/Volume/94517.jpg", null,  "caption");
 		//Photo Id from Telegram
 		return new Media(Media.MediaType.ID, null, "AgACAgQAAxkDAAIBJWcVMhnwninrxiKtePVSbt3UbUC_AAK7wjEbkFGoUGJkVYSa6r-dAQADAgADdwADNgQ", "caption");
 	}

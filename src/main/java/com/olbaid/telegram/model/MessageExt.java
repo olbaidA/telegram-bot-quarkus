@@ -5,7 +5,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class MessageExt {
 
     @JsonProperty("message_id")
-    private Integer messageId;
+    private Long messageId;
 
     @JsonProperty("from")
     private User from;
@@ -28,25 +28,31 @@ public class MessageExt {
     @JsonProperty("animation")
     private Animation animation;
 
-    @JsonProperty("caption")
-    private String caption;
-
     @JsonProperty("document")
     private Document document;
 
-    @JsonProperty("reply_markup")
-    private InlineKeyboardMarkup replyMarkup;
+    @JsonProperty("caption")
+    private String caption;
 
     @JsonProperty("link_preview_options")
     private LinkPreviewOptions linkPreviewOptions;
 
+    @JsonProperty("reply_markup")
+    private InlineKeyboardMarkup replyMarkup;
+
+    @JsonProperty("contact")
+    private Contact contact;
+
+    @JsonProperty("location")
+    private Location location;
+
     // Getters and setters
 
-    public Integer getMessageId() {
+    public Long getMessageId() {
         return messageId;
     }
 
-    public void setMessageId(Integer messageId) {
+    public void setMessageId(Long messageId) {
         this.messageId = messageId;
     }
 
@@ -106,6 +112,14 @@ public class MessageExt {
         this.animation = animation;
     }
 
+    public Document getDocument() {
+        return document;
+    }
+
+    public void setDocument(Document document) {
+        this.document = document;
+    }
+
     public String getCaption() {
         return caption;
     }
@@ -114,12 +128,12 @@ public class MessageExt {
         this.caption = caption;
     }
 
-    public Document getDocument() {
-        return document;
+    public LinkPreviewOptions getLinkPreviewOptions() {
+        return linkPreviewOptions;
     }
 
-    public void setDocument(Document document) {
-        this.document = document;
+    public void setLinkPreviewOptions(LinkPreviewOptions linkPreviewOptions) {
+        this.linkPreviewOptions = linkPreviewOptions;
     }
 
     public InlineKeyboardMarkup getReplyMarkup() {
@@ -130,11 +144,19 @@ public class MessageExt {
         this.replyMarkup = replyMarkup;
     }
 
-    public LinkPreviewOptions getLinkPreviewOptions() {
-        return linkPreviewOptions;
+    public Contact getContact() {
+        return contact;
     }
 
-    public void setLinkPreviewOptions(LinkPreviewOptions linkPreviewOptions) {
-        this.linkPreviewOptions = linkPreviewOptions;
+    public void setContact(Contact contact) {
+        this.contact = contact;
+    }
+
+    public Location getLocation() {
+        return location;
+    }
+
+    public void setLocation(Location location) {
+        this.location = location;
     }
 }

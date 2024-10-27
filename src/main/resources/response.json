@@ -1,85 +1,136 @@
 {
-  "ok" : true,
-  "result" : [ {
-    "update_id" : 829393820,
-    "message" : {
-      "message_id" : 302,
-      "from" : {
-        "id" : 161252687,
-        "is_bot" : false,
-        "first_name" : "AG$X",
-        "last_name" : "Gabriel",
-        "username" : "il_GaG",
-        "language_code" : "it"
-      },
-      "chat" : {
-        "id" : 161252687,
-        "first_name" : "AG$X",
-        "last_name" : "Gabriel",
-        "username" : "il_GaG",
-        "type" : "private"
-      },
-      "date" : 1729444945,
-      "text" : "/suca",
-      "entities" : [ {
-        "offset" : 0,
-        "length" : 5,
-        "type" : "bot_command"
-      } ]
+  "ok": true,
+  "result": [
+    {
+      "update_id": 829394158,
+      "message": {
+        "message_id": 1306,
+        "from": {
+          "id": 7423737047,
+          "is_bot": false,
+          "first_name": "Gabriele",
+          "last_name": "Allegretti",
+          "language_code": "it"
+        },
+        "chat": {
+          "id": 7423737047,
+          "first_name": "Gabriele",
+          "last_name": "Allegretti",
+          "type": "private"
+        },
+        "date": 1730036433,
+        "text": "Condividi location al Bot"
+      }
+    },
+    {
+      "update_id": 829394159,
+      "message": {
+        "message_id": 1307,
+        "from": {
+          "id": 161252687,
+          "is_bot": false,
+          "first_name": "AG$X",
+          "last_name": "Gabriel",
+          "username": "il_GaG",
+          "language_code": "it"
+        },
+        "chat": {
+          "id": 161252687,
+          "first_name": "AG$X",
+          "last_name": "Gabriel",
+          "username": "il_GaG",
+          "type": "private"
+        },
+        "date": 1730036468,
+        "location": {
+          "latitude": 45.049355,
+          "longitude": 7.675595
+        }
+      }
+    },
+    {
+      "update_id": 829394160,
+      "message": {
+        "message_id": 1308,
+        "from": {
+          "id": 7423737047,
+          "is_bot": false,
+          "first_name": "Gabriele",
+          "last_name": "Allegretti",
+          "language_code": "it"
+        },
+        "chat": {
+          "id": 7423737047,
+          "first_name": "Gabriele",
+          "last_name": "Allegretti",
+          "type": "private"
+        },
+        "date": 1730036552,
+        "text": "/start",
+        "entities": [
+          {
+            "offset": 0,
+            "length": 6,
+            "type": "bot_command"
+          }
+        ]
+      }
+    },
+    {
+      "update_id": 829394161,
+      "message": {
+        "message_id": 1311,
+        "from": {
+          "id": 7423737047,
+          "is_bot": false,
+          "first_name": "Gabriele",
+          "last_name": "Allegretti",
+          "language_code": "it"
+        },
+        "chat": {
+          "id": 7423737047,
+          "first_name": "Gabriele",
+          "last_name": "Allegretti",
+          "type": "private"
+        },
+        "date": 1730036601,
+        "text": "/start",
+        "entities": [
+          {
+            "offset": 0,
+            "length": 6,
+            "type": "bot_command"
+          }
+        ]
+      }
+    },
+    {
+      "update_id": 829394162,
+      "message": {
+        "message_id": 1313,
+        "from": {
+          "id": 7423737047,
+          "is_bot": false,
+          "first_name": "Gabriele",
+          "last_name": "Allegretti",
+          "language_code": "it"
+        },
+        "chat": {
+          "id": 7423737047,
+          "first_name": "Gabriele",
+          "last_name": "Allegretti",
+          "type": "private"
+        },
+        "date": 1730036609,
+        "text": "/stop",
+        "entities": [
+          {
+            "offset": 0,
+            "length": 5,
+            "type": "bot_command"
+          }
+        ]
+      }
     }
-  }, {
-    "update_id" : 829393821,
-    "message" : {
-      "message_id" : 392,
-      "from" : {
-        "id" : 161252687,
-        "is_bot" : false,
-        "first_name" : "AG$X",
-        "last_name" : "Gabriel",
-        "username" : "il_GaG",
-        "language_code" : "it"
-      },
-      "chat" : {
-        "id" : 161252687,
-        "first_name" : "AG$X",
-        "last_name" : "Gabriel",
-        "username" : "il_GaG",
-        "type" : "private"
-      },
-      "date" : 1729453466,
-      "text" : "/suca",
-      "entities" : [ {
-        "offset" : 0,
-        "length" : 5,
-        "type" : "bot_command"
-      } ]
-    }
-  }, {
-    "update_id" : 829393822,
-    "message" : {
-      "message_id" : 397,
-      "from" : {
-        "id" : 161252687,
-        "is_bot" : false,
-        "first_name" : "AG$X",
-        "last_name" : "Gabriel",
-        "username" : "il_GaG",
-        "language_code" : "it"
-      },
-      "chat" : {
-        "id" : 161252687,
-        "first_name" : "AG$X",
-        "last_name" : "Gabriel",
-        "username" : "il_GaG",
-        "type" : "private"
-      },
-      "date" : 1729453692,
-      "text" : "/suca",
-      "entities" : [ {
-        "offset" : 0,
-        "length" : 5,
-        "type" : "bot_command"
-      } ]
-    }
-  } ]
+  ]
 }
